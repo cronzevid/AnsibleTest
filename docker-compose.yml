@@ -1,0 +1,5 @@
+version: '2'
+
+services:
+  my_alpine:
+    image: my:alpine
