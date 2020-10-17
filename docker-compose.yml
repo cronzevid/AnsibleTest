@@ -1,5 +1,16 @@
-version: '2'
+version: '3'
 
 services:
   my_alpine:
-    image: my:alpine
+    image: ansilpine:latest
+    networks:
+      test_net:
+  client-node:
+    image: alpine:latest
+    container_name: client-node
+    command: /bin/sleep infinity
+    networks:
+      test_net:
+
+networks:
+  test_net:
